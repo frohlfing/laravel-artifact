@@ -32,8 +32,8 @@ class ArtifactCreateCommand extends Command
      * @var string
      */
     protected $signature = 'artifact:create
-                            { --p|package=        : Package name (format: <vendor>/<package>; default: all) }
-                            { --o|overwrite       : Overwrite any existing archives }';
+                            { --p|package=  : Package name (format: <vendor>/<package>) <comment>[default: all]</comment> }
+                            { --o|overwrite : Overwrite any existing archives }';
 
     /**
      * The console command description.
@@ -192,7 +192,7 @@ class ArtifactCreateCommand extends Command
             ];
         }
 
-//        foreach (scandir($path) as $vendor) {
+//        foreach (scandir(base_) as $vendor) {
 //            if (is_dir($vendor) && !in_array($vendor,  ['.', '..', 'bin', 'composer'])) {
 //                foreach (scandir($path . '/' . $vendor) as $package) {
 //                    if ($package !== '.' && $package !== '..') {
