@@ -134,7 +134,7 @@ class ArtifactCreateCommand extends Command
                         $this->writeRed("Could not delete composer.json from archive\n");
                         return;
                     }
-                    if (!$zip->addFromString('composer.json', json_encode($composerJson))) {
+                    if (!$zip->addFromString('composer.json', json_encode($composerJson, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES))) {
                         $this->writeRed("Could not add composer.json to archive\n");
                         return;
                     }
