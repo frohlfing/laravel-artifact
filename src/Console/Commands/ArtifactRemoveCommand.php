@@ -1,6 +1,6 @@
 <?php
 
-namespace FRohlfing\Scaffold\Console\Commands;
+namespace FRohlfing\Artifact\Console\Commands;
 
 use Exception;
 use FRohlfing\Scaffold\Services\Scaffolder;
@@ -11,7 +11,7 @@ use Illuminate\Console\Command;
  * php artisan devtools:scaffold -n -f -c -m AllField array1:array bigint1:bigint binary1:binary bool1:bool char1:char collection1:collection date1:date datetime1:datetime decimal1:decimal5,3 float1:float guid1:guid int1:int longtext1:longtext object1:object smallint1:smallint string1:string text1:text time1:time uint1:uint select1:string25[a,b], select2:int[one,two]=1
 */
 
-class ScaffoldRemoveCommand extends Command
+class ArtifactRemoveCommand extends Command
 {
     /**
      * Exit Codes.
